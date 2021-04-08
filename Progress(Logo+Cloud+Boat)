@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block threedtitle %}{% endblock %}
+
+    <style>
+      body {
+        margin: 0;
+      }
+
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene background="color: #006994">
+      <a-asset>
+        <a-asset-item
+          id="toilet-glb"
+          src="https://cdn.glitch.com/363ceccc-81b4-4479-bcb3-2ec8a1761469%2Fmodel.glb?v=1617835248390"
+        ></a-asset-item>
+        <a-asset-item
+          id="cloud"
+          src="https://cdn.glitch.com/363ceccc-81b4-4479-bcb3-2ec8a1761469%2Fscene.glb?v=1617850908287"
+        ></a-asset-item>
+        <a-asset-item
+          id="OnePiece"
+          src="https://cdn.glitch.com/363ceccc-81b4-4479-bcb3-2ec8a1761469%2FOnePiece%20Logo.glb?v=1617852457160"
+        ></a-asset-item>
+      </a-asset>
+      
+        <!-- Camera -->
+      <a-entity position="0 100 100">
+        <a-camera></a-camera>
+      </a-entity>
+
+
+      <!-- toilet -->
+      <a-entity
+        gltf-model="#toilet-glb"
+        position="0 0 0"
+        scale="50 50 50"
+        animation="property: rotation; to: 0 360 0; dur: 14000; easing: linear; loop: true"
+      >
+      </a-entity>
+      <a-entity gltf-model="#cloud" position="50 200 50" scale="7 7 7">
+      </a-entity>
+      <a-entity gltf-model="#cloud" position="-200 100 -200" scale="4 4 4">
+      </a-entity>
+      <a-entity gltf-model="#cloud" position="-500 300 -500" scale="1 1 1">
+      </a-entity>
+      <a-entity
+        gltf-model="#OnePiece"
+        position="50 100 100"
+        scale="5 5 5"
+        rotation = "65.285 -99.801 174.59"
+      >
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
