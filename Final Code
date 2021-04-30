@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block threedtitle %}{% endblock %}
+
+    <style>
+      body {
+        margin: 0;
+      }
+
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene background="color: #55ceff">
+      <a-asset>
+        <a-asset-item
+          id="toilet-glb"
+          src="https://cdn.glitch.com/363ceccc-81b4-4479-bcb3-2ec8a1761469%2Fmodel.glb?v=1617835248390"
+        ></a-asset-item>
+        <a-asset-item
+          id="cloud"
+          src="https://cdn.glitch.com/363ceccc-81b4-4479-bcb3-2ec8a1761469%2Fscene.glb?v=1617850908287"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="Island"
+          src="https://cdn.glitch.com/363ceccc-81b4-4479-bcb3-2ec8a1761469%2F1220%20Island%20(3).glb?v=1618386726909"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="Luffy"
+          src="https://cdn.glitch.com/363ceccc-81b4-4479-bcb3-2ec8a1761469%2FLuffy.glb?v=1617853754405"
+        ></a-asset-item>
+      </a-asset>
+
+      <a-asset-item
+        id="Usopp"
+        src="https://cdn.glitch.com/363ceccc-81b4-4479-bcb3-2ec8a1761469%2FUsopp.glb?v=1617865299608"
+      ></a-asset-item>
+
+      <a-asset-item
+        id="Treasure"
+        src="https://cdn.glitch.com/363ceccc-81b4-4479-bcb3-2ec8a1761469%2Fwooden_treasure.glb?v=16178653700735"
+      ></a-asset-item>
+
+      <a-asset-item
+        id="Ship"
+        src="https://cdn.glitch.com/363ceccc-81b4-4479-bcb3-2ec8a1761469%2Fpirate_ship.glb?v=16178672027115"
+      ></a-asset-item>
+
+      <a-asset-item
+        id="Thousand-Sunny"
+        src="https://cdn.glitch.com/363ceccc-81b4-4479-bcb3-2ec8a1761469%2FThousand-Sunny.glb?v=1618099533813"
+      ></a-asset-item>
+
+      <a-asset-item
+        id="OP-Zoro"
+        src="https://cdn.glitch.com/363ceccc-81b4-4479-bcb3-2ec8a1761469%2FOP-Zoro.glb?v=1618197856363"
+      ></a-asset-item>
+
+      <a-asset-item
+        id="Seagull"
+        src="https://cdn.glitch.com/363ceccc-81b4-4479-bcb3-2ec8a1761469%2Fseagulls.glb?v=1619676007125"
+      ></a-asset-item>
+
+      <a-asset-item
+        id="Gulls"
+        src="https://cdn.glitch.com/363ceccc-81b4-4479-bcb3-2ec8a1761469%2FGulls.glb?v=1619676007285"
+      ></a-asset-item>
+
+      <a-asset-item
+        id="Sun"
+        src="https://cdn.glitch.com/363ceccc-81b4-4479-bcb3-2ec8a1761469%2Fsun.glb?v=1619676007308"
+      ></a-asset-item>
+
+      <a-asset-item
+        id="Goldfish"
+        src="https://cdn.glitch.com/363ceccc-81b4-4479-bcb3-2ec8a1761469%2Fgoldfish.glb?v=1619676009021"
+      ></a-asset-item>
+
+      <a-asset-item
+        id="pship"
+        src="https://cdn.glitch.com/363ceccc-81b4-4479-bcb3-2ec8a1761469%2Fpirate-ship.glb?v=1619676010924"
+      ></a-asset-item>
+
+      <a-asset-item
+        id="Koifish"
+        src="https://cdn.glitch.com/363ceccc-81b4-4479-bcb3-2ec8a1761469%2Fkoi-fish.glb?v=1619676012273"
+      ></a-asset-item>
+
+      <!-- Camera -->
+      <a-entity position="0 20 250">
+        <a-camera></a-camera>
+      </a-entity>
+
+      <!-- toilet -->
+
+      <a-entity gltf-model="#cloud" position="160.22 417 -226.2" scale="6 6 6">
+      </a-entity>
+      <a-entity gltf-model="#cloud" position="-164.8 353.03 -200" scale="4 4 4">
+      </a-entity>
+      <a-entity
+        gltf-model="#cloud"
+        position="-702.4 319.61 -1000"
+        scale="2 2 2"
+      >
+      </a-entity>
+
+      <a-entity
+        gltf-model="#Luffy"
+        position="-5.522 32.997 34.807"
+        scale="75 75 75"
+      >
+      </a-entity>
+
+      <a-entity gltf-model="#Usopp" position="50 20 0" scale="50 50 50">
+      </a-entity>
+
+      <a-entity
+        gltf-model="#Thousand-Sunny"
+        position="0 -160.4 0"
+        scale="4 4 4"
+      >
+      </a-entity>
+
+      <a-entity
+        gltf-model="#Island"
+        position="-1800 -280 -2251"
+        scale="10 10 10"
+      >
+      </a-entity>
+
+      <a-entity gltf-model="#Island" position="667.2 -280 -1988" scale="5 5 5">
+      </a-entity>
+
+      <a-entity
+        gltf-model="#Seagull"
+        position="493 319.61 -1000"
+        scale="20 20 20 "
+      >
+      </a-entity>
+
+      <a-entity gltf-model="#Sun" position="-1236 886 -1801" scale="1 1 1">
+      </a-entity>
+
+      <a-entity
+        gltf-model="#Goldfish"
+        position="260 -220 -355"
+        rotation="50 50 100"
+        scale="10 10 10"
+      >
+      </a-entity>
+
+      <a-entity
+        gltf-model="#pship"
+        position="-1189 -298 -814"
+        rotation="0 30 0"
+        scale="6 6 6"
+      >
+      </a-entity>
+
+      <a-entity
+        gltf-model="#Koifish"
+        position="-402 -298 -955"
+        rotation="0 75 75"
+        scale="1 1 1"
+      >
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
